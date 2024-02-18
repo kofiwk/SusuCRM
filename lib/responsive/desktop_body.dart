@@ -63,13 +63,14 @@ class MyDesktopBody extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      border: Border(right: BorderSide(color: Colors.grey, width: 20)),
+                      border: 
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'Username'
+                        hintText: 'Username',
+                        suffixIcon: Icon(Icons.account_circle_rounded)
                       ),
                     ),
                   ),
