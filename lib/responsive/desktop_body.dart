@@ -63,7 +63,6 @@ class MyDesktopBody extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      border: 
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: TextField(
