@@ -11,7 +11,7 @@ class MyDesktopBody extends StatelessWidget {
         child: Center(
           child: Container(
             width: 400,
-            height: 300,
+            height: 350,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
@@ -66,6 +66,7 @@ class MyDesktopBody extends StatelessWidget {
                   ),
                   ),
 
+                // Username Textfield
                 SizedBox(height: 10),
 
                 Padding(
@@ -88,12 +89,47 @@ class MyDesktopBody extends StatelessWidget {
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
                           ),
-                          suffixIcon: Icon(Icons.account_circle_rounded)
+                          suffixIcon: Icon(
+                            Icons.account_circle_rounded,
+                            size: 20,
+                            )
                         ),
                       ),
                     ),
                   ),
-                )
+                ),
+
+                // Password Textfield
+                const SizedBox(height: 10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: Colors.grey
+                      )
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Password',
+                          hintStyle: TextStyle(
+                            fontFamily: 'Urbanist',
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.lock_rounded,
+                            size: 20,
+                            )
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
