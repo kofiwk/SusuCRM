@@ -35,12 +35,14 @@ class MyDesktopBody extends StatelessWidget {
                             text: 'Susu',
                             style: TextStyle(
                               fontSize: 40,
+                              fontFamily: 'Urbanist'
                             )
                           ),
                           TextSpan(
                             text: 'CRM',
                             style: TextStyle(
                               fontSize: 40,
+                              fontFamily: 'Urbanist',
                               fontWeight: FontWeight.bold,
                             )
                           )
@@ -53,9 +55,16 @@ class MyDesktopBody extends StatelessWidget {
                   thickness: 1
                 ),
                 
-                SizedBox(height: 30),
+                SizedBox(height: 20),
 
-                Text('Please Login'),
+                Text(
+                  'Please Login',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w100,
+                    fontFamily: 'Urbanist'
+                  ),
+                  ),
 
                 SizedBox(height: 10),
 
@@ -64,12 +73,23 @@ class MyDesktopBody extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: Colors.grey
+                      )
                     ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Username',
-                        suffixIcon: Icon(Icons.account_circle_rounded)
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Username',
+                          hintStyle: TextStyle(
+                            fontFamily: 'Urbanist',
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          suffixIcon: Icon(Icons.account_circle_rounded)
+                        ),
                       ),
                     ),
                   ),
