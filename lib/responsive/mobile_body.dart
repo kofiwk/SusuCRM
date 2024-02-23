@@ -1,3 +1,4 @@
+import 'package:crm/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class MyMobileBody extends StatelessWidget {
@@ -9,9 +10,8 @@ class MyMobileBody extends StatelessWidget {
       backgroundColor: Colors.deepPurple[300],
       body: SafeArea(
         child: Center(
-          
         )
-      ),
+      )
     );
   }
 }
