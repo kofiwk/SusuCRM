@@ -1,4 +1,4 @@
-import 'package:crm/responsive/desktop_body.dart';
+import 'package:crm/responsive/login_page.dart';
 import 'package:crm/screens/dashboard.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -13,9 +13,9 @@ class AuthPage extends StatelessWidget {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: ((context, snapshot) {
           if (snapshot.hasData) {
-            return DashboardPage();
+            return const DashboardPage();
           } else {
-            return MyDesktopBody();
+            return LoginPage();
           }
         }),
       ),
