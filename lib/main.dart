@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Good Times Susu',
+      title: 'Good Times Susu Enterprise',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       home: LoginOrRegister(
         
