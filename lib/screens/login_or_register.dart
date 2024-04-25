@@ -15,9 +15,49 @@ class _LoginOrRegisterPageState extends State<LoginOrRegisterPage> {
       body: SafeArea(
         child: Center(
           child: Container(
-            width: 100,
-            height: 100,
-            color: Colors.black,
+            width: 400,
+            height: 350,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(6),
+              color: Colors.white,
+              border: const Border(
+                top: BorderSide(
+                  color: Colors.black,
+                  width: 5
+                ),
+              ),
+            ),
+            child: const Column(
+              children: [
+                SizedBox(
+                  width: 400,
+                  height: 70,
+                  child:  Center(
+                    child: Text.rich(
+                      TextSpan(
+                       children: [
+                        TextSpan(
+                          text: 'GoodTimes Opportunities',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'Urbanist'
+                          )
+                        ),
+                        TextSpan(
+                          text: ' SusuCRM',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.bold
+                          )
+                        )
+                       ]
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
