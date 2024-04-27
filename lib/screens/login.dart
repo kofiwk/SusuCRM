@@ -161,6 +161,38 @@ class _LoginPageState extends State<LoginPage> {
                   text: 'Sign In',
                   onTap: login
                 ),
+
+                const SizedBox(height: 25),
+
+                // Register 
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'New to CRM?',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Urbanist',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: widget.onTap,
+                        child: const Text(
+                          'Create an account',
+                            style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
