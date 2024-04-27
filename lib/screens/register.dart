@@ -19,7 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Center(
           child: Container(
             width: 400,
-            height: 400,
+            height: 440,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(6),
               color: Colors.white,
@@ -40,12 +40,15 @@ class _RegisterPageState extends State<RegisterPage> {
                             style: TextStyle(
                                 fontSize: 30, fontFamily: 'Urbanist')),
                         TextSpan(
-                            text: ' SusuCRM',
-                            style: TextStyle(
-                                fontSize: 30,
-                                fontFamily: 'Urbanist',
-                                fontWeight: FontWeight.bold))
-                      ]),
+                          text: ' SusuCRM',
+                          style: TextStyle(
+                              fontSize: 30,
+                              fontFamily: 'Urbanist',
+                              fontWeight: FontWeight.bold
+                            )
+                          )
+                        ]
+                      ),
                     ),
                   ),
                 ),
@@ -55,10 +58,10 @@ class _RegisterPageState extends State<RegisterPage> {
                   color: Colors.black,
                 ),
 
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
 
                 const Text(
-                  'Please Login',
+                  'Create an account',
                   style: TextStyle(
                     fontSize: 16,
                     fontFamily: 'Urbanist',
@@ -140,11 +143,77 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 10,
                 ),
 
+                // Confirm password
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(6),
+                        border: Border.all(
+                          color: Colors.black,
+                        )),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 20),
+                      child: TextField(
+                        obscureText: true,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontFamily: 'Urbanist',
+                          fontWeight: FontWeight.w200,
+                        ),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: 'Confirm Password',
+                          hintStyle: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.w100,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 10),
+
                 // Sign in button
                 MyButton(
-                  text: 'Sign In', 
+                  text: 'Sign Up', 
                   onTap: (){}
                 ),
+
+                const SizedBox(height: 20),
+
+                // Already have an account
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'Already have an account?',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Urbanist',
+                        fontWeight: FontWeight.w100
+                      ),
+                    ),
+                    const SizedBox( width: 5),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: widget.onTap,
+                        child: const Text(
+                          'Login',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
