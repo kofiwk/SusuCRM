@@ -10,7 +10,9 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.yellow[200],
       body: Row(
         children: [
-          MyDrawer(), // Drawer on the left side
+          MyDrawer(
+            onTap: () {},
+          ), // Drawer on the left side
           Expanded(
             child: Column(
               children: [
