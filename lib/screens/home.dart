@@ -1,8 +1,29 @@
-import 'package:flutter/material.dart';
 import 'package:crm/components/drawer.dart';
+import 'package:crm/screens/cart.dart';
+import 'package:crm/screens/notifications.dart';
+import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  void _openNotificationsPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const NotificationsPage()),
+    );
+  }
+
+  void _openShoppingCartPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const CartPage()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +41,28 @@ class HomePage extends StatelessWidget {
                   elevation: 0,
                   backgroundColor: Colors.white,
                   automaticallyImplyLeading: false,
-                  title: const Text(
-                    'Home',
-                    style: TextStyle(
-                      fontFamily: 'Urbanist'
-                    ),
+                  title: const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Home',
+                        style: TextStyle(fontFamily: 'Urbanist'),
+                      ),
+
+                      // Appbar icons
+                      Padding(
+                        padding: EdgeInsets.only(right: 100),
+                        child: Row(
+                          children: [
+                            Icon(Icons.notifications_outlined),
+                        
+                            SizedBox(width: 50),
+                            
+                            Icon(Icons.shopping_cart_outlined)
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(width: 20),
@@ -38,10 +76,9 @@ class HomePage extends StatelessWidget {
                         Text(
                           'Welcome',
                           style: TextStyle(
-                            fontFamily: 'Urbanist',
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold
-                          ),
+                              fontFamily: 'Urbanist',
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
