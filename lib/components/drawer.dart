@@ -37,7 +37,7 @@ class MyDrawer extends StatelessWidget {
             icon: Icons.home, 
             onTap: onTap,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           // Calendar
           MyDrawerTile(
             text: 'Calendar', 
@@ -50,35 +50,35 @@ class MyDrawer extends StatelessWidget {
               )
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           // People
           MyDrawerTile(
             text: 'People', 
             icon: Icons.people, 
             onTap: onTap,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           // Groups
           MyDrawerTile(
             text: 'Groups', 
             icon: Icons.label, 
             onTap: onTap,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           // Groups
           MyDrawerTile(
             text: 'Email', 
             icon: Icons.email, 
             onTap: onTap,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           // Data / Reports
           MyDrawerTile(
             text: 'Data/Reports', 
             icon: Icons.dataset, 
             onTap: onTap,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           // Asmin
           MyDrawerTile(
             text: 'Admin', 
